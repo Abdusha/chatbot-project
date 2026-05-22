@@ -12,7 +12,7 @@ app.use(cors());
 const ai = new GoogleGenAI({
     apiKey: process.env.GOOGLE_GENAI_API_KEY,
 });
-const GEMINI_MODEL = "gemma-4-26b-a4b-it";
+const GEMINI_MODEL = "gemini-2.5-flash";
 const tools = [
     {
       googleSearch: {
@@ -22,7 +22,7 @@ const tools = [
 const GEMINI_CONFIG = {
     temperature: 0.3,
     thinkingConfig: {
-        thinkingLevel: ThinkingLevel.MINIMAL,
+      thinkingBudget: 0,
     },
     tools,
     systemInstruction: [
