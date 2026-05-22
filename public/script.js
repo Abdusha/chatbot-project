@@ -157,7 +157,7 @@ async function handleFormSubmit(e) {
 
   // Add file info to conversation if exists
   if (uploadedFile) {
-    const fileMessage = `[CV File: ${uploadedFile.name}]\n\nContent:\n${uploadedFile.content.substring(0, 500)}...`;
+    const fileMessage = `[CV File: ${uploadedFile.name}]\n\nContent:\n${uploadedFile.content}`;
     conversationHistory.push({
       role: 'user',
       text: fileMessage
